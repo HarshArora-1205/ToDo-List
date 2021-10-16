@@ -1,0 +1,184 @@
+@font-face {
+  font-family: comodo;
+  src: url("./Comodo-Regular.otf");
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: comodo,sans-serif;
+  background-color: #0B0C10;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  overflow-x: hidden;
+  min-height: 1000vh;
+}
+
+body .bg-grid {
+  height: 100%;
+}
+
+body .bg-grid .light {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 10rem;
+  height: 10rem;
+  border-radius: 5rem;
+  -webkit-filter: blur(20px);
+          filter: blur(20px);
+  background: #66FCF1;
+  z-index: 0;
+}
+
+body .bg-grid .grid {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url("./Hexa Grid.svg");
+  background-repeat: repeat-y;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+body .head h1 {
+  pointer-events: none;
+  position: relative;
+  color: #66FCF1;
+  text-align: center;
+  letter-spacing: 0.4rem;
+  font-size: 4rem;
+  margin-top: 1.5rem;
+  top: 0;
+  z-index: 2;
+}
+
+body .input {
+  position: relative;
+  pointer-events: none;
+  z-index: 2;
+  border-radius: 1.25rem;
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+  width: 50%;
+  min-width: 30%;
+  height: 2.5rem;
+  background-color: #66FCF1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+body .input #todo-input {
+  color: #0B0C10;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  width: 90%;
+  background: none;
+  outline: none;
+  border: none;
+  font-size: 1.4rem;
+  padding-left: 20px;
+  border-top-left-radius: 1.25rem;
+  border-bottom-left-radius: 1.25rem;
+  pointer-events: visible;
+}
+
+body .input .todo-button {
+  pointer-events: visibleFill;
+  width: 10%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: none;
+  border: none;
+  border-top-right-radius: 1.25rem;
+  border-bottom-right-radius: 1.25rem;
+  cursor: pointer;
+}
+
+body .input .todo-button i {
+  font-size: 1.2rem;
+  color: #0B0C10;
+}
+
+body .input .todo-button:hover i {
+  color: #1F2833;
+  font-size: 1.6rem;
+  -webkit-transition: all 0.1s ease;
+  transition: all 0.1s ease;
+}
+
+body .todo-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 60%;
+  pointer-events: none;
+  z-index: 2;
+}
+
+body .todo-container .todo-list {
+  width: 100%;
+  list-style: none;
+}
+
+body .todo-container .todo-list .todo {
+  height: 4rem;
+  margin: 2rem 0;
+  background-color: #66FCF1;
+  color: #0B0C10;
+  border-radius: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+body .todo-container .todo-list .todo .todo-check, body .todo-container .todo-list .todo .todo-del {
+  pointer-events: visible;
+}
+/*# sourceMappingURL=style.css.map */

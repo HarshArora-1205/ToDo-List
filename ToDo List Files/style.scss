@@ -1,0 +1,157 @@
+// colors
+$primary : #66FCF1;
+$secondary : #0B0C10;
+$primary-dark : #45A29E;
+$secondary-dark : #1F2833;
+
+// font
+@font-face {
+    font-family: comodo;
+    src: url('./Comodo-Regular.otf');
+}
+
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    // min-height: 100vh;
+    font-family: comodo,sans-serif;
+    background-color: $secondary;
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    overflow-x: hidden;
+    min-height: 1000vh;
+    .bg-grid
+    {
+        height: 100%;
+        .light
+        {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10rem;
+            height: 10rem;
+            border-radius: 5rem;
+            filter: blur(20px);
+            background: $primary;
+            z-index: 0;
+        }
+        .grid
+        {
+            position: fixed;
+            top: 0;
+            left: 0;
+            background-image: url('./Hexa\ Grid.svg');
+            // background-size: contain;
+            background-repeat: repeat-y;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+    }
+    .head h1
+    {
+        pointer-events: none;
+        position: relative;
+        color : $primary;
+        text-align: center;
+        letter-spacing: 0.4rem;
+        font-size: 4rem;
+        margin-top: 1.5rem;
+        top: 0;
+        z-index: 2;
+    }
+    .input
+    {
+        position: relative;
+        pointer-events: none;
+        z-index: 2;
+        border-radius: 1.25rem;
+        margin-top: 1.5rem;
+        margin-bottom: 2rem;
+        width: 50%;
+        min-width: 30%;
+        height: 2.5rem;
+        background-color: $primary;
+        display: flex;
+        align-items: center;
+        #todo-input
+        {
+            color: $secondary;
+            align-items: center;
+            height: 100%;
+            width: 90%;
+            background: none;
+            outline: none;
+            border: none;
+            font-size: 1.4rem;
+            padding-left: 20px;
+            border-top-left-radius: 1.25rem;
+            border-bottom-left-radius: 1.25rem;
+            pointer-events: visible;
+        }
+        .todo-button
+        {
+            pointer-events:visibleFill;
+            width: 10%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: none;
+            border: none;
+            border-top-right-radius: 1.25rem;
+            border-bottom-right-radius: 1.25rem;
+            cursor: pointer;
+            i
+            {
+                font-size: 1.2rem;
+                color: $secondary;
+            }
+            &:hover i
+            {
+                color: $secondary-dark;
+                font-size: 1.6rem;
+                transition: all 0.1s ease;
+            }
+        }
+    }
+    .todo-container
+    {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        // background-color:  green;
+        width: 60%;
+        pointer-events: none;
+        z-index: 2;
+        .todo-list
+        {
+            width: 100%;
+            list-style: none;
+            .todo
+            {
+                // width: 100%;
+                height: 4rem;
+                margin: 2rem 0;
+                background-color: $primary;
+                color: $secondary;
+                border-radius: 2rem;
+                display: flex;
+                align-items: center;
+                justify-content: space-evenly;
+                .todo-check,.todo-del
+                {
+                    pointer-events: visible;
+                }
+            }
+        }
+    }
+}
